@@ -29,5 +29,6 @@ begin
 
 		set @SKUPrice = @SumValue / @SumQuantity
 	end
+
 	return isnull(@SKUPrice, cast(0 as decimal(18, 2)))
 end
