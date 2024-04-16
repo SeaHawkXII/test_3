@@ -19,7 +19,9 @@ begin
 	if not exists (select * from #ID_Family)
 	begin
 		set @ErrorMessage = concat('Семьи ', @FamilySurName, ' нет')
+
 		raiserror(@ErrorMessage, 1, 1)
+    
 		return
 	end
 
